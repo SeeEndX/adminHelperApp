@@ -4,15 +4,10 @@ using System.Drawing;
 
 namespace adminHelperADGPTests
 {
-    public class adminHelperADGPTests : IDisposable
+    public class adminHelperADGPModuleTests
     {
-        public void Dispose()
-        {
-            //close test
-        }
-
         [Fact]
-        public void rdpOnTest()
+        public void rdpOnTest() //модульное
         {
             //Arrange
             string expected = "RDP ON";
@@ -26,7 +21,7 @@ namespace adminHelperADGPTests
         }
 
         [Fact]
-        public void testFormWithRdpOff()
+        public void testFormWithRdpOff() //модульное
         {
             // Arrange
             var form = new Form1();
@@ -42,6 +37,44 @@ namespace adminHelperADGPTests
             // Assert
             Assert.Equal(actual, expected);
             Assert.Equal(expected1, actual1);
+        }
+    }
+
+    public class adminHelperADGPFunctionalTests
+    {
+        private ScriptManager scriptManager;
+        private Form1 form;
+        private string dhcpScriptOn = @"C:\Scripts\scriptDHCPOn.ps1";
+        private string dhcpScriptOff = @"C:\Scripts\scriptDHCPOff.ps1";
+
+        [Fact]
+        public void TestConfigureDHCP_Enable()
+        {
+            // Arrange
+            form = new Form1();
+            scriptManager = new ScriptManager(form);
+            string expected = $"-ExecutionPolicy Bypass -File \"{dhcpScriptOn}\"";
+
+            // Act
+            scriptManager.configureDHCP("Enable");
+
+            // Assert
+            Assert.Equal(expected, scriptManager.Arguments);
+        }
+
+        [Fact]
+        public void TestConfigureDHCP_Disable()
+        {
+            // Arrange
+            form = new Form1();
+            scriptManager = new ScriptManager(form);
+            string expected = $"-ExecutionPolicy Bypass -File \"{dhcpScriptOff}\"";
+
+            // Act
+            scriptManager.configureDHCP("Disable");
+
+            // Assert
+            Assert.Equal(expected, scriptManager.Arguments);
         }
     }
 }

@@ -7,6 +7,8 @@ namespace adminHelperADGP
     public class ScriptManager
     {
         private Form1 form; // Ссылка на экземпляр формы Form1
+        public string Arguments { get; private set; }
+
 
         public ScriptManager(Form1 form)
         {
@@ -51,18 +53,19 @@ namespace adminHelperADGP
         //функция работы с DHCP
         public void configureDHCP(string option)
         {
-            string scriptFilePath = "";
+            string scriptFilePath;
 
             if (option == "Enable")
             {
                 scriptFilePath = @"C:\Scripts\scriptDHCPOn.ps1"; //путь до скрипта
             }
-            else if (option == "Disable")
+            else
             {
                 scriptFilePath = @"C:\Scripts\scriptDHCPOff.ps1"; //путь до скрипта
             }
 
             string arguments = $"-ExecutionPolicy Bypass -File \"{scriptFilePath}\""; //аргументы и команда выполнения скрипта с полными правами
+            Arguments = arguments;
 
             executePowershellScript(arguments);
         }

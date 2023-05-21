@@ -9,6 +9,7 @@ namespace adminHelperADGP
     public partial class Form1 : Form
     {
         private ScriptManager scriptManager;
+        public string CbDHCPText { get; private set; }
         public Form1()
         {
             InitializeComponent();
@@ -80,7 +81,7 @@ namespace adminHelperADGP
             }
         }
 
-        private void cbDHCP_CheckedChanged(object sender, EventArgs e)
+        public void cbDHCP_CheckedChanged(object sender, EventArgs e)
         {
             if (cbDHCP.Checked)
             {
