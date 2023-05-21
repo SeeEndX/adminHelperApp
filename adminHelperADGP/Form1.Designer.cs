@@ -370,7 +370,7 @@
         private System.Windows.Forms.TabPage tabSetup;
         private System.Windows.Forms.TabPage tabNetworking;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label lblResult;
+        public System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox cbRdp;
         private System.Windows.Forms.Button button3;
