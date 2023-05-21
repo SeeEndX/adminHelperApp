@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adminHelperADGP", "adminHelperADGP\adminHelperADGP.csproj", "{805918BA-F957-40DB-BCD8-2A4D89D7816B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adminHelperADGPTests", "adminHelperADGPTests\adminHelperADGPTests.csproj", "{75ECE363-883B-44E0-8A86-575CC9BAA897}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{805918BA-F957-40DB-BCD8-2A4D89D7816B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{805918BA-F957-40DB-BCD8-2A4D89D7816B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{805918BA-F957-40DB-BCD8-2A4D89D7816B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75ECE363-883B-44E0-8A86-575CC9BAA897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75ECE363-883B-44E0-8A86-575CC9BAA897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75ECE363-883B-44E0-8A86-575CC9BAA897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75ECE363-883B-44E0-8A86-575CC9BAA897}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

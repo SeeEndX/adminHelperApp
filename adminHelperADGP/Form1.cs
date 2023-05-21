@@ -128,5 +128,25 @@ namespace adminHelperADGP
                 e.Handled = true;
             }
         }
+
+        /*public string testRDP(int option)
+        {
+            string result;
+            if (option == 1)
+            {
+                cbRdp.Checked = true;
+                scriptManager.configureRDP(0);
+                cbRdp.Text = "RDP ON";
+            }
+            else
+            {
+                cbRdp.Checked = false;
+                scriptManager.configureRDP(1);
+                cbRdp.Text = "RDP OFF";
+            }
+
+            result = cbRdp.Text;
+            return result;
+        }*/
     }
 }

@@ -372,7 +372,7 @@
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox cbRdp;
+        public System.Windows.Forms.CheckBox cbRdp;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;

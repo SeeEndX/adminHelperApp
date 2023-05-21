@@ -4,13 +4,18 @@ using System.Drawing;
 
 namespace adminHelperADGP
 {
-    internal class ScriptManager
+    public class ScriptManager
     {
         private Form1 form; // Ссылка на экземпляр формы Form1
 
         public ScriptManager(Form1 form)
         {
             this.form = form;
+        }
+
+        public ScriptManager getSM()
+        {
+            return this;
         }
 
         //функция запуска скриптов powershell
@@ -96,6 +101,21 @@ namespace adminHelperADGP
             string arguments = $"-ExecutionPolicy Bypass -File \"{scriptFilePath}\""; //аргументы и команда выполнения скрипта с полными правами
 
             executePowershellScript(arguments);
+        }
+
+        public string testRDP(int option)
+        {
+            if (option == 1)
+            {
+                configureRDP(0);
+                form.cbRdp.Text = "RDP ON";
+            }
+            else
+            {
+                configureRDP(1);
+                form.cbRdp.Text = "RDP OFF";
+            }
+            return form.cbRdp.Text;
         }
     }
 }
